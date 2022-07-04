@@ -5,19 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css" class="rel">
-    <script src="howler.min.js"></script>
     <script src="app.js"></script>
     <title>Browser Drum Machine</title>
 </head>
 <body>
+    <!--main container for the drum pad itself. Each div within represents each individual pad which could be easily styled in CSS file-->
     <div class="drumpads">
-        <div class="pad"><img src="./icons/clap.png" alt="clapping hands"></div>
-        <div class="pad"><img src="./icons/closed-hihat.png" alt="closed hi-hat"></div>
-        <div class="pad"><img src="./icons/crash.png" alt="crash cymbal"></div>
-        <div class="pad"><img src="./icons/kick.png" alt="kick drum"></div>
-        <div class="pad"><img src="./icons/open-hihat.png" alt="open hi-hat"></div>
-        <div class="pad"><img src="./icons/snare.png" alt="snare drum"></div>
+        <div class="pad"><img src="./icons/clap.png" alt="clapping hands"><p>A</p></div>
+        <div class="pad"><img src="./icons/closed-hihat.png" alt="closed hi-hat"><p>S</p></div>
+        <div class="pad"><img src="./icons/crash.png" alt="crash cymbal"><p>D</p></div>
+        <div class="pad"><img src="./icons/kick.png" alt="kick drum"><p>J</p></div>
+        <div class="pad"><img src="./icons/open-hihat.png" alt="open hi-hat"><p>K</p></div>
+        <div class="pad"><img src="./icons/snare.png" alt="snare drum"><p>L</p></div>
     </div>
+
+    <!--setting up audio controls for each individual wave file. This is what the js file will use to trigger the sound on keystroke-->
+    <audio id="clap" controls style="display: none;"><source src="./samples/clap.wav"></audio>
+    <audio id="closedhat" controls style="display: none;"><source src="./samples/closedhat.wav"></audio>
+    <audio id="crash" controls style="display: none;"><source src="./samples/crash.wav"></audio>
+    <audio id="kick" controls style="display: none;"><source src="./samples/kick.wav"></audio>
+    <audio id="openhat" controls style="display: none;"><source src="./samples/openhat.wav"></audio>
+    <audio id="snare" controls style="display: none;"><source src="./samples/snare.wav"></audio>
 
 </body>
 </html> 
